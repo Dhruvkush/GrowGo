@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plants Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 100px;
+      flex-wrap: wrap;
+    }
+
+    .top-section {
+      background-color: #f3f8f3;
+    }
+
+    .bottom-section {
+      background-color: #fff;
+    }
+
+    .left-img img,
+    .right-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .text-content {
+      max-width: 550px;
+    }
+
+    h1, h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .green {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .orange {
+      color: #D2691E;
+      font-weight: bold;
+    }
+
+    button {
+      background: none;
+      border: 2px solid #D2691E;
+      padding: 10px 20px;
+      color: #D2691E;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #D2691E;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .text-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="section top-section">
+    <div class="left-img">
+      <img src="Img/left-img.png" alt="Hanging Plant" />
+    </div>
+    <div class="text-content">
+      <h1>We grow <span class="green">plants</span> and give you oxygen</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <button>LEARN MORE</button>
+    </div>
+  </section>
+
+  <section class="section bottom-section">
+    <div class="text-content">
+      <h2>
+        <span class="green">We are</span>
+        <span class="orange">professional</span><br />
+        <span class="orange">experienced</span>
+        <span class="green">gardeners</span>
+      </h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...</p>
+    </div>
+    <div class="right-img">
+      <img src="Img/right-img.jpeg" alt="Potted Plant" />
+    </div>
+  </section>
+
+</body>
+</html>

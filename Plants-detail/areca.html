@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #d0dcd4;
+      color: #2e3a2f;
+    }
+
+    .layout {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #f0f6f3;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-right: 1px solid #ccc;
+    }
+
+    .sidebar h2 {
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    .plant-list-item {
+      background: #ddefdd;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .plant-list-item h4 {
+      margin: 5px 0;
+    }
+
+    .main {
+      flex: 1;
+      padding: 30px;
+      background-color: #f9fdfb;
+      overflow-y: auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .welcome {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 200px;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .card p {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .plant-details,
+    .water-level {
+      margin-top: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .money-pl {
+      background: #f8fcf5;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .water-level ul {
+      padding-left: 20px;
+    }
+
+    .water-level ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .main {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cards {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .plant-details,
+      .water-level {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sidebar h2 {
+        font-size: 20px;
+      }
+
+      .card p {
+        font-size: 20px;
+      }
+
+      .welcome {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layout">
+    <div class="sidebar">
+      <h2>🌿 GrowGo</h2>
+      <div class="plant-list-item">
+        <h4>Areca Palm</h4>
+        <p><small>Dypsis lutescens</small></p>
+      </div>
+      <div class="plant-list-item">
+        <h4>Soil</h4>
+        <p><small>Well-draining, loamy soil rich in organic matter.</small></p>
+      </div>
+      <div class="plant-list-item">
+        <h4>Benefits</h4>
+        <p><small>Excellent natural humidifier<br>Removes toxins like toluene, xylene, CO₂.</small></p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="header">
+        <div class="welcome">Areca Palm <strong></strong></div>
+        <div class="date">Saturday, 27 Jul 2022</div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Humidity Percentage</h3>
+          <p>55% - 70%</p>
+        </div>
+        <div class="card">
+          <h3>Daily Water pH</h3>
+          <p>6.1 - 6.5</p>
+        </div>
+        <div class="card">
+          <h3>Temperature</h3>
+          <p>18°C - 28°C</p>
+        </div>
+      </div>
+
+      <div class="plant-details">
+        <h3>Plant Details</h3><br>
+        <div class="money-pl">
+          <p>
+            The Areca Palm (Dypsis lutescens), also known as the Butterfly Palm or Golden Cane Palm, is a graceful, feathery-leafed plant native to Madagascar. Its clumping fronds with arching green leaflets make it a favorite choice for homes, offices, and indoor gardens seeking a tropical touch.
+          </p>
+        </div>
+        <div class="money-pl">
+          <p>
+            Thriving best in bright, indirect light, Areca Palm prefers well-draining, fertile soil that remains lightly moist but never soggy. It enjoys warm, humid environments and is especially effective at naturally humidifying indoor air, making it great for rooms with AC or dry air.
+          </p>
+        </div>
+        <div class="money-pl">
+          <p>
+            This palm is non-toxic to pets and children, making it a safe indoor option. It also made NASA’s list of top air-purifying plants, helping filter out indoor pollutants.
+          </p>
+        </div>
+        <div class="money-pl">
+          <p>
+            Though low-maintenance, it benefits from regular cleaning and attention to watering needs, as overwatering or underwatering can cause brown tips.
+          </p>
+        </div>
+      </div>
+
+      <div class="water-level">
+        <h3>Care</h3><br>
+        <ul>
+          <li>Pruning: Trim brown or dead fronds every 3–4 weeks</li>
+          <li>Check: Weekly for spider mites or dry leaf tips</li>
+          <li>Sunlight: Bright, indirect light; avoid direct harsh sun</li>
+          <li>Leaf Cleaning: Wipe leaves every 2 weeks with a soft damp cloth</li>
+          <li>Drainage: Use pots with good drainage; do not let roots sit in water</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

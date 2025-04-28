@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      background-color: #d0dcd4;
+      color: #2e3a2f;
+      overflow: hidden;
+      flex-direction: row;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #f0f6f3;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-right: 1px solid #ccc;
+      height: 100vh;
+    }
+
+    .sidebar h2 {
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    .sidebar nav a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: #2e3a2f;
+      font-weight: 600;
+    }
+
+    .main {
+      flex: 1;
+      padding: 30px;
+      background-color: #f9fdfb;
+      overflow-y: auto;
+      height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .welcome {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .card {
+      flex: 1;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .card p {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .plant-details,
+    .water-level {
+      margin-top: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-right {
+      width: 300px;
+      background: #0e2e25;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .add-plant {
+      background: #f67c3c;
+      color: white;
+      padding: 10px;
+      margin: 20px 0;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .plant-list-item {
+      background: #ddefdd;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .money-pl {
+      background: #f8fcf5;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .care {
+      background: #f7f7f7;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .plant-list-item h4 {
+      margin: 5px 0;
+    }
+
+    .layout {
+      display: flex;
+      flex: 1;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      body {
+        flex-direction: column;
+        overflow: auto;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .layout {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .main {
+        padding: 20px;
+        height: auto;
+      }
+
+      .cards {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .cards {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .plant-details,
+      .water-level {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sidebar h2 {
+        font-size: 20px;
+      }
+
+      .welcome {
+        font-size: 18px;
+      }
+
+      .card p {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2>🌿 GrowGo </h2>
+
+    <div class="plant-list-item">
+      <h4>Money Plant</h4>
+      <p><small>Epipremnum aureum</small></p>
+    </div>
+    <div class="plant-list-item">
+      <h4>Soil</h4>
+      <p><small>Well-draining potting mix.</small></p>
+    </div>
+    <div class="plant-list-item">
+      <h4>Benefits</h4>
+      <p><small>Air Purification: Removes pollutants like formaldehyde, benzene (NASA Clean Air Study).</small></p>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="main">
+      <div class="header">
+        <div class="welcome">Money Plant <strong></strong></div>
+        <div class="date">Saturday, 27 Jul 2022</div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Humidity Percentage</h3>
+          <p>50% - 70%</p>
+        </div>
+        <div class="card">
+          <h3>Daily Water pH</h3>
+          <p>6.0 - 7.5</p>
+        </div>
+        <div class="card">
+          <h3>Temperature</h3>
+          <p>18°C - 30°C</p>
+        </div>
+      </div>
+
+      <div class="plant-details">
+        <h3>Plant Details</h3><br>
+
+        <div class="money-pl">
+          <p>
+            The Money Plant (Epipremnum aureum), also known as Devil’s Ivy, Golden Pothos, or Silver Vine, is a popular
+            evergreen vine native to French Polynesia and widely grown indoors for its attractive, heart-shaped green
+            leaves often streaked with yellow, white, or pale green.
+          </p>
+        </div>
+
+        <div class="money-pl">
+          <p>
+            It is a fast-growing climber with flexible stems that can root easily in soil or water, making it one of the
+            easiest houseplants to propagate through stem cuttings. Thriving in bright, indirect light but also tolerating
+            low-light conditions, it prefers well-draining soil and moderate watering—only when the topsoil dries out.
+          </p>
+        </div>
+
+        <div class="money-pl">
+          <p>
+            The plant grows best in warm temperatures (18–30°C) and moderate to high humidity. There are several popular
+            varieties including Golden Pothos, Marble Queen, Neon, and Manjula, each with unique leaf patterns.
+            Widely loved for its air-purifying properties, the Money Plant is also considered a symbol of prosperity and
+            good luck in many cultures, especially in Vastu Shastra and Feng Shui, where it is often placed in the
+            southeast direction of homes and offices.
+          </p>
+        </div>
+
+        <div class="money-pl">
+          <p>
+            Though low-maintenance and aesthetically pleasing in hanging baskets or climbing moss poles, it is mildly
+            toxic to pets and humans if ingested, so it should be kept out of reach of children and animals.
+          </p>
+        </div>
+      </div>
+
+      <div class="water-level">
+        <h3>Care</h3><br>
+        <ul>
+          <li>Pruning: Every 2 weeks for fullness</li>
+          <li>Check: Weekly for pests and health</li>
+          <li>Sunlight: Bright, indirect light preferred.</li>
+          <li>Leaf Cleaning: Wipe leaves every 2 weeks</li>
+          <li>Drainage: Never let roots sit in water.</li>
+        </ul>
+      </div>

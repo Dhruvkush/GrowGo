@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant Care Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .header {
+      background-image: url('https://img.freepik.com/free-photo/indoor-plants-studio_23-2151022053.jpg?t=st=1744694727~exp=1744698327~hmac=5099d43665e908459731bd68e2bb822be0c0a8c777d5908782201c52ce2378f3&w=1380');
+      /* Add header image link */
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      margin: 10px 20px 20px 20px;
+      border-radius: 12px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2em;
+    }
+
+    .plant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .plant-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding-bottom: 10px;
+    }
+
+    .plant-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .plant-info {
+      padding: 15px;
+    }
+
+    .plant-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin: 2px 3px 0 0;
+      color: white;
+    }
+
+    .tag.gray {
+      background-color: #888;
+    }
+
+    .tag.red {
+      background-color: #e74c3c;
+    }
+
+    .tag.green {
+      background-color: #2ecc71;
+    }
+
+    .tag.orange {
+      background-color: #e67e22;
+    }
+
+    .tag.blue {
+      background-color: #3498db;
+    }
+
+    .tag.yellow {
+      background-color: #f1c40f;
+    }
+
+    .tag.purple {
+      background-color: #9b59b6;
+    }
+
+    .tag.pink {
+      background-color: #fd79a8;
+    }
+
+    .tag.brown {
+      background-color: #a0522d;
+    }
+
+    .new-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fafafa;
+      border: 2px dashed #ccc;
+      font-size: 16px;
+      height: 270px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo" style="display: flex; justify-content: center; align-items: center; margin: 10px 20px 10px 20px;">
+    <img width="150px" src="gglogo.png" alt="GrowGo Logo">
+  </div>
+
+  <div class="header"></div>
+
+  <div class="container">
+    <h1>Plant Care Tracker</h1>
+    <h3>My Plants</h3>
+
+    <div class="plant-grid">
+
+      <!-- Chinese Money Plant -->
+      <div class="plant-card">
+        <img src="imgg3.jpeg" alt="Chinese Money Plant">
+        <div class="plant-info">
+          <div class="plant-title">🌱 Chinese Money Plant (Pilea Peperomioides)</div>
+          <span class="tag gray">👌 OK but keep an eye</span>
+          <span class="tag gray">💧 1x per Week</span>
+          <span class="tag gray">Whenever Soil is Dry</span>
+          <span class="tag gray">📅 Oct 23, 2024</span>
+          <span class="tag gray">Medium</span>
+          <span class="tag gray">☀️ Indirect Sunlight</span>
+          <span class="tag gray">Mist 3x per Week</span>
+        </div>
+      </div>
+
+      <!-- Monstera Deliciosa -->
+      <div class="plant-card">
+        <img src="imgg5.jpeg" alt="Monstera Deliciosa">
+        <div class="plant-info">
+          <div class="plant-title">🌿 Monstera Deliciosa</div>
+          <span class="tag green">❤️ Healthy</span>
+          <span class="tag blue">💧 1x per Week</span>
+          <span class="tag orange">📅 Oct 23, 2024</span>
+          <span class="tag yellow">☀️ Indirect Sunlight</span>
+          <span class="tag purple">Medium</span>
+          <span class="tag brown">High</span>
+          <span class="tag blue">Mist Daily</span>
+        </div>
+      </div>
+
+      <!-- Snake Plant -->
+      <div class="plant-card">
+        <img src="imgg6.jpeg" alt="Snake Plant">
+        <div class="plant-info">
+          <div class="plant-title">🌵 Snake Plant</div>
+          <span class="tag red">❗ Unhealthy - Watch Out!!!</span>
+          <span class="tag blue">💧 1x per Month</span>
+          <span class="tag orange">📅 Oct 8, 2024</span>
+          <span class="tag yellow">☀️ Indirect Sunlight</span>
+          <span class="tag brown">High</span>
+          <span class="tag purple">Medium</span>
+          <span class="tag gray">Don’t Mist</span>
+        </div>
+      </div>
+
+      <div class="plant-card">
+        <img src="imgg2.jpeg" alt="Snake Plant">
+        <div class="plant-info">
+          <div class="plant-title">🌵 Snake Plant</div>
+          <span class="tag red">❗ Unhealthy - Watch Out!!!</span>
+          <span class="tag blue">💧 1x per Month</span>
+          <span class="tag orange">📅 Oct 8, 2024</span>
+          <span class="tag yellow">☀️ Indirect Sunlight</span>
+          <span class="tag brown">High</span>
+          <span class="tag purple">Medium</span>
+          <span class="tag gray">Don’t Mist</span>
+        </div>
+      </div>
+
+      <div class="plant-card">
+        <img src="imgg.jpeg" alt="Coming Soon">
+        <div class="plant-info">
+          <div class="plant-title">🌵 Snake Plant</div>
+          <span class="tag red">❗ Unhealthy - Watch Out!!!</span>
+          <span class="tag blue">💧 1x per Month</span>
+          <span class="tag orange">📅 Oct 8, 2024</span>
+          <span class="tag yellow">☀️ Indirect Sunlight</span>
+          <span class="tag brown">High</span>
+          <span class="tag purple">Medium</span>
+          <span class="tag gray">Don’t Mist</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #fff;
+  }
+
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px;
+    flex-wrap: wrap;
+  }
+
+  .top-section {
+    background-color: #f3f8f3;
+  }
+
+  .bottom-section {
+    background-color: #fff;
+  }
+
+  .left-img img,
+  .right-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .text-content {
+    max-width: 550px;
+  }
+
+  h1,
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .green {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+
+  .orange {
+    color: #D2691E;
+    font-weight: bold;
+  }
+
+  button {
+    background: none;
+    border: 2px solid #D2691E;
+    padding: 10px 20px;
+    color: #D2691E;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #D2691E;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .text-content {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <section class="section top-section">
+    <div class="left-img">
+      <img src="stick.png" alt="Hanging Plant" />
+    </div>
+    <div class="text-content">
+      <h1>We grow <span class="green">plants</span> and give you oxygen</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s.</p>
+      <button>LEARN MORE</button>
+    </div>
+  </section>
+
+  <section class="section bottom-section">
+    <div class="text-content">
+      <h2>
+        <span class="green">We are</span>
+        <span class="orange">professional</span><br />
+        <span class="orange">experienced</span>
+        <span class="green">gardeners</span>
+      </h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book...</p>
+    </div>
+    <div class="right-img">
+      <img src="stick.png" alt="Potted Plant" />
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .footer {
+      background-color: #f4f8f4;
+      padding: 40px 0 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-icons {
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: rgb(0, 0, 0);
+      background-color: white;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 18px;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+      background-color: #444;
+      color: white;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      background-color: #000;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .footer-bottom span {
+      color: #aaa;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <ul class="footer-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Our Team</a></li>
+    </ul>
+
+    <div class="footer-bottom">
+      <p>Copyright ©2022; Designed by <span>FAHEEM</span></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
